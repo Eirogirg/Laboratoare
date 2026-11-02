@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1 id="titlu">Laboratorul 6 este despre o continuare a JavaScript</h1>
+    <p id="par">Ploaia este o formă de precipitație <br>atmosferică sub formă de picături de apă provenite din <br> condensarea vaporilor din atmosferă.</p>
+
+    <script>
+        document.getElementById("titlu").onclick = function(){
+            var color = prompt("Introduceti o culoare:", "nume_culoare");
+            if(CSS.supports("color", color)){
+                document.getElementById("titlu").style.color = color;
+            }else{
+                window.alert("culoare invalida!");
+            }
+            
+        }
+       
+
+        document.getElementById("par").onclick = function(){
+            var background = prompt("Introduceti o culoare de fundal:", "nume_culoare");
+            if(CSS.supports("background-color", background)){
+                 document.getElementById("par").style.backgroundColor = background;
+            }else{
+                window.alert("culoare invalida!")
+            }
+           
+        }
+    </script>
+</body>

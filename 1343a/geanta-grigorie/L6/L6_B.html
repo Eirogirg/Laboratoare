@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .p1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: cornflowerblue;
+        }
+
+        .p2{
+            font-family: cursive;
+            color: darkseagreen;
+        }
+    </style>
+</head>
+<body>
+    <button id="b">Buton</button>
+    <p class="p1" id="p1">Paragraful 1</p>
+    <p class="p2" id="p2">paragraful 2</p>
+
+    <script>
+        document.getElementById("p1").onclick = function(){
+            var text = prompt("Introduceti noul text al paragrafului:", "Paragraful 1");
+            if(text !== null && text !== ""){
+            this.innerHTML = text;
+            }
+        }
+
+        document.getElementById("p2").onclick = function(){
+            var text = prompt("Introduceti noul text al paragrafului:", "Paragraful 2");
+            if(text !== null && text !== ""){
+            this.innerHTML = text;
+            }
+        }
+
+        document.getElementById("b").onclick = function(){
+            var aux = document.getElementById("p1").innerHTML;
+            document.getElementById("p1").innerHTML = document.getElementById("p2").innerHTML;
+            document.getElementById("p2").innerHTML = aux;
+        }
+    </script>
+</body>
